@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_header" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/edit_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/base_edit_height"
+                android:layout_margin="10dp"
+                android:background="@drawable/input"
+                android:hint="@string/title_hint"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:id="@+id/edit_photo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/base_edit_height"
+                android:layout_margin="10dp"
+                android:background="@drawable/input"
+                android:hint="@string/photo_hint"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:id="@+id/edit_describe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/input"
+                android:hint="@string/describe_hint"
+                android:maxLength="50"
+                android:minLines="4"
+                android:paddingLeft="10dp" />
+
+            <Button
+                android:id="@+id/bt_founddate"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input"
+                android:onClick="foundDateChoose"
+                android:text="选择丢失时间"
+                android:textColor="#A8A8A8"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btn_found_upload"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/bg_btn_press_selector_1"
+                android:onClick="uploadFound"
+                android:text="发布招领信息"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
